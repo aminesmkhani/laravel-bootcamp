@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::resource('chirp',ChirpController::class)
+Route::resource('chirps',ChirpController::class)
     ->only(['index','store'])
     ->middleware(['auth','verified']);
 
