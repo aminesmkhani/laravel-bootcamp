@@ -53,7 +53,7 @@ class ChirpPolicy
      */
     public function update(User $user, Chirp $chirp)
     {
-        //
+        return $chirp->user()->is($user);
     }
 
     /**
